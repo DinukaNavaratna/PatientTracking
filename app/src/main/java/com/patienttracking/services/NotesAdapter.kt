@@ -42,7 +42,7 @@ class NotesAdapter (private val context: Context, private val noteList: List<Not
             val db = DB_Helper(context, null)
             val values = ContentValues()
             values.put("status", "deleted")
-            db.update("notes", values, note.id)
+            db.update("notes", values, note.id, "id")
             Toast.makeText(context, "Note deleted...", Toast.LENGTH_SHORT).show()
             (context as Notes).reload()
         })

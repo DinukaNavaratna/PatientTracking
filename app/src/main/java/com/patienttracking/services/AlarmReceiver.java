@@ -67,6 +67,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         cursor_time.moveToFirst();
         ContentValues values = new ContentValues();
         values.put("next_time", Long.parseLong(cursor_time.getString(0))+(1000*60*60*24));
-        db.update("reminders", values, intent.getStringExtra("id"));
+        db.update("reminders", values, intent.getStringExtra("id"), "id");
     }
 }

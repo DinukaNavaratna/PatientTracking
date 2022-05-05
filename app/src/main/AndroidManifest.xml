@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PatientTracking">
         <activity
-            android:name=".Medication"
+            android:name=".Patient_Details"
             android:exported="false" />
         <activity
             android:name=".Notes"

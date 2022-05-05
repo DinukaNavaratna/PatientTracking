@@ -46,7 +46,7 @@ class RemindersAdapter (private val context: Context, private val reminderList: 
                 val db = DB_Helper(context, null)
                 val values = ContentValues()
                 values.put("status", "true")
-                db.update("reminders", values, reminder.id)
+                db.update("reminders", values, reminder.id, "id")
                 alarmManager!!.setRepeating(AlarmManager.RTC_WAKEUP, (reminder.time).toLong(), 1000 * 60 * 60 * 24, pendingIntent)
                 Toast.makeText(context, "Reminder switched on...", Toast.LENGTH_SHORT).show()
             } else {
@@ -54,7 +54,7 @@ class RemindersAdapter (private val context: Context, private val reminderList: 
                 val db = DB_Helper(context, null)
                 val values = ContentValues()
                 values.put("status", "false")
-                db.update("reminders", values, reminder.id)
+                db.update("reminders", values, reminder.id, "id")
                 Toast.makeText(context, "Reminder switched off...", Toast.LENGTH_SHORT).show()
             }
         })
@@ -63,7 +63,7 @@ class RemindersAdapter (private val context: Context, private val reminderList: 
             val db = DB_Helper(context, null)
             val values = ContentValues()
             values.put("status", "deleted")
-            db.update("reminders", values, reminder.id)
+            db.update("reminders", values, reminder.id, "id")
             Toast.makeText(context, "Reminder deleted...", Toast.LENGTH_SHORT).show()
             (context as Reminders).reload()
         })

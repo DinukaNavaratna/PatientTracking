@@ -104,7 +104,7 @@ class Notes : AppCompatActivity() {
             val values = ContentValues()
             values.put("title", note_title)
             values.put("body", note_body)
-            db.update("notes", values, id)
+            db.update("notes", values, id, "id")
             reload()
         })
     }

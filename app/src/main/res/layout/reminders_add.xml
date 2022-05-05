@@ -10,15 +10,22 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Reminder Title"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:headerBackground="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Reminder Title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/remindertitle"
@@ -49,12 +56,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="16sp" />
-
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
 
             <Button
                 android:id="@+id/note_add_button"

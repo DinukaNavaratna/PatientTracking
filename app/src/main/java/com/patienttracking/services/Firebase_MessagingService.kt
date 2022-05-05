@@ -10,6 +10,9 @@ import android.os.Build
 import android.app.NotificationManager
 import android.content.Context
 import android.graphics.Color
+import android.media.Ringtone
+import android.media.RingtoneManager
+import android.net.Uri
 import android.util.Log
 import androidx.annotation.RequiresApi
 import org.json.JSONObject
@@ -66,8 +69,10 @@ class Firebase_MessagingService : FirebaseMessagingService() {
             .setContentText(remoteMessage.notification!!.body)
             .setDefaults(Notification.DEFAULT_ALL)
             .setWhen(System.currentTimeMillis())
-            .setSmallIcon(R.drawable.sym_def_app_icon)
+            .setSmallIcon(R.drawable.ic_popup_reminder)
             .setAutoCancel(true)
+            .setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
+            .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM))
         mNotificationManager.notify(1000, notificationBuilder.build())
     }
 }

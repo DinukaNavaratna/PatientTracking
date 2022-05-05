@@ -60,14 +60,14 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/register_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
                     android:ems="10"
+                    android:hint="Name"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     android:textColor="#D1D1D1"
                     android:textSize="16sp" />
 
@@ -83,14 +83,14 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName2"
+                    android:id="@+id/register_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
                     android:ems="10"
+                    android:hint="Email"
                     android:inputType="textWebEmailAddress"
-                    android:text="Name"
                     android:textColor="#D1D1D1"
                     android:textSize="16sp" />
 
@@ -106,23 +106,23 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPassword"
+                    android:id="@+id/register_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
                     android:ems="10"
+                    android:hint="Password"
                     android:inputType="textPassword"
                     android:textColor="#D1D1D1"
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/register_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
-                    android:onClick="openHome"
                     android:text="Register" />
 
                 <TextView

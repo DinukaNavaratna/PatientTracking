@@ -32,9 +32,9 @@ class DB_Helper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         return db.rawQuery(query, null)
     }
 
-    fun update(table: String, values : ContentValues, id: String) {
+    fun update(table: String, values : ContentValues, id: String, where: String) {
         val db = this.writableDatabase
-        db.update(table, values, "id=?", arrayOf(id))
+        db.update(table, values, "$where=?", arrayOf(id))
         db.close()
     }
 

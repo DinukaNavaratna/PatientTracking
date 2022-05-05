@@ -7,6 +7,20 @@
     android:background="@drawable/bg"
     tools:context=".Welcome">
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Welcome!"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"

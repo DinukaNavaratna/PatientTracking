@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
+import com.patienttracking.services.DB_Helper
 import com.patienttracking.services.SharedPreference
 
 
@@ -36,6 +37,9 @@ class Splash_Screen : AppCompatActivity() {
                     finish()
                 }
             } else {
+                val db = DB_Helper(this, null)
+                db.createTable("CREATE TABLE reminders (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, body TEXT NOT NULL, time TEXT NOT NULL, next_time TEXT NOT NULL, status TEXT NOT NULL)")
+                db.createTable("CREATE TABLE notes (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, body TEXT NOT NULL, time TEXT NOT NULL, status TEXT NOT NULL)")
                 sp.setPreference("isNew", "false")
                 val intent = Intent(this, Welcome::class.java)
                 startActivity(intent)
@@ -50,7 +54,6 @@ class Splash_Screen : AppCompatActivity() {
 
             var pushToken = task.result
 
-            Toast.makeText(baseContext, pushToken, Toast.LENGTH_SHORT).show()
             Log.i("PUSH_TOKEN", "*****************************")
             Log.i("PUSH_TOKEN", "*****************************")
             Log.i("PUSH_TOKEN", "*****************************")

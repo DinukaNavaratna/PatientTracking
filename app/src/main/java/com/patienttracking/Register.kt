@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.patienttracking.services.SharedPreference
 
 class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,8 @@ class Register : AppCompatActivity() {
     }
 
     fun openHome(view: View) {
+        val sp = SharedPreference(this)
+        sp.setPreference("isLoggedIn", "true")
         val intent = Intent(this, Home::class.java)
         startActivity(intent)
         finish()

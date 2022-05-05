@@ -107,7 +107,7 @@
                     android:layout_height="150dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="30dp"
-                    android:onClick="openHistory"
+                    android:onClick="openNotes"
                     android:orientation="vertical">
 
                     <ImageView
@@ -122,7 +122,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="4"
-                        android:text="History"
+                        android:text="Notes"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp"

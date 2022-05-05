@@ -4,6 +4,8 @@
     package="com.patienttracking">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,7 +17,7 @@
             android:name=".Medication"
             android:exported="false" />
         <activity
-            android:name=".History"
+            android:name=".Notes"
             android:exported="false" />
         <activity
             android:name=".Welcome"
@@ -52,7 +54,7 @@
         </service>
 
         <!-- Alarm -->
-        <receiver android:name=".alarm.AlarmReceiver"></receiver>
+        <receiver android:name=".services.AlarmReceiver"></receiver>
     </application>
 
 </manifest>

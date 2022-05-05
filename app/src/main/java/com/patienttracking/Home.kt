@@ -23,9 +23,12 @@ class Home : AppCompatActivity() {
         finish()
     }
 
-    fun openHistory(view: View) {
-        val intent = Intent(this, History::class.java)
+    fun openNotes(view: View) {
+        val intent = Intent(this, Notes::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun onBackPressed() {
     }
 }

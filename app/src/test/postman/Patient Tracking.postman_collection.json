@@ -17,7 +17,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "key=AAAAKt1Ce6U:APA91bESSGPJJ0ErJ13Bw-HdJ5O4POPQwQ2cZU7PPIxokmelwOjsnoW-YFbrjUj1LKvCa4oeV1QjUYVDJ6eLb7wh-an3ezMmfKBLthoDoies7vPy1bgB2Z9OQUjW8MhzcrcWYPbgzuwt",
+						"value": "key={{Firebase_Auth_Key}}",
 						"type": "text"
 					}
 				],
@@ -53,7 +53,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "key=AAAAKt1Ce6U:APA91bESSGPJJ0ErJ13Bw-HdJ5O4POPQwQ2cZU7PPIxokmelwOjsnoW-YFbrjUj1LKvCa4oeV1QjUYVDJ6eLb7wh-an3ezMmfKBLthoDoies7vPy1bgB2Z9OQUjW8MhzcrcWYPbgzuwt",
+						"value": "key={{Firebase_Auth_Key}}",
 						"type": "text"
 					}
 				],
@@ -89,7 +89,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "key=AAAAKt1Ce6U:APA91bESSGPJJ0ErJ13Bw-HdJ5O4POPQwQ2cZU7PPIxokmelwOjsnoW-YFbrjUj1LKvCa4oeV1QjUYVDJ6eLb7wh-an3ezMmfKBLthoDoies7vPy1bgB2Z9OQUjW8MhzcrcWYPbgzuwt",
+						"value": "key={{Firebase_Auth_Key}}",
 						"type": "text"
 					}
 				],
@@ -138,6 +138,11 @@
 		{
 			"key": "Device_Token",
 			"value": "frP5Xh9OQe-gfrBgxEdmzk:APA91bE3Z2voHle89hc3Hke1reRhgrkUL2i9_FTejxULXs7RjNh9FL4Sqmg1TtGvJ7gKm59NVosxj3afjWgKnMDfjmysHCZWkoaQHgqbOgAvPeLLC-p9M37BKohU_ug7evuDnxcj_8qq",
+			"type": "string"
+		},
+		{
+			"key": "Firebase_Auth_Key",
+			"value": "AAAAKt1Ce6U:APA91bESSGPJJ0ErJ13Bw-HdJ5O4POPQwQ2cZU7PPIxokmelwOjsnoW-YFbrjUj1LKvCa4oeV1QjUYVDJ6eLb7wh-an3ezMmfKBLthoDoies7vPy1bgB2Z9OQUjW8MhzcrcWYPbgzuwt",
 			"type": "string"
 		}
 	]

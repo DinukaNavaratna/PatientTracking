@@ -1,13 +1,18 @@
 package com.patienttracking
 
 import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
+import android.widget.Toast
 import com.patienttracking.services.DB_Helper
 import com.patienttracking.services.SharedPreference
 
@@ -18,6 +23,19 @@ class Patient_Details : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.patient_details)
+
+        var intent = intent
+        if (intent.hasExtra("lat") && intent.hasExtra("lng")) {
+            val gmmIntentUri = Uri.parse("google.navigation:q="+ (intent.getExtras()?.getString("lat")) +"," +intent.getExtras()?.getString("lng"))
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            if (mapIntent.resolveActivity(this.getPackageManager()) != null) {
+                this.startActivity(mapIntent);
+            } else {
+                Toast.makeText(this, "Failed to open Google Maps", Toast.LENGTH_SHORT).show()
+            }
+        }
+        val sp = SharedPreference(this)
 
         val patient_name = findViewById<EditText>(R.id.patient_name)
         val patient_birthday = findViewById<EditText>(R.id.patient_birthday)
@@ -30,7 +48,14 @@ class Patient_Details : AppCompatActivity() {
         val patient_most_recent_doctor_visit = findViewById<EditText>(R.id.patient_most_recent_doctor_visit)
         val details_action_button = findViewById<ImageButton>(R.id.details_action_button)
 
-        val sp = SharedPreference(this)
+        val patient_details_blood_pressure = findViewById<TextView>(R.id.patient_details_blood_pressure)
+        val patient_details_heart_rate = findViewById<TextView>(R.id.patient_details_heart_rate)
+        val patient_details_caloties_burned = findViewById<TextView>(R.id.patient_details_calories_burned)
+
+        patient_details_blood_pressure.text = sp.getPreference("blood_pressure")
+        patient_details_heart_rate.text = sp.getPreference("heart_rate")
+        patient_details_caloties_burned.text = sp.getPreference("calories_burned")
+
         val db = DB_Helper(this, null)
         val cursor = db.retrieve("SELECT * FROM patients WHERE user_email='"+sp.getPreference("user_email")+"';")
         Log.i("Count", cursor?.getCount().toString())

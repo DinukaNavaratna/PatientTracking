@@ -53,6 +53,9 @@ class Register : AppCompatActivity() {
                 sp.setPreference("isLoggedIn", "true")
                 sp.setPreference("user_name", registername)
                 sp.setPreference("user_email", registeremail)
+                sp.setPreference("blood_pressure", "0")
+                sp.setPreference("heart_rate", "0")
+                sp.setPreference("calories_burned", "0")
 
                 val intent = Intent(this, Home::class.java)
                 startActivity(intent)

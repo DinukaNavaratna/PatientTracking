@@ -5,6 +5,6 @@ Please note that this is a simple Android app created within 2/3 days maximum ac
 
 ## Testing
 
-1. Create a Firebase project and replace the 'app/google-services.json' file with your own project file taken from Firebase project you created.
-2. A postman request collection has been included in 'app/src/test/postman/' for testing the FCM push notifications. Replace the existing 'Device_Token' & 'Firebase_Auth_Key' in Postman collection variabled with your own details/credentials.
+1. Create a Firebase project and replace the '<a href="https://github.com/DinukaNavaratna/PatientTracking/blob/main/app/google-services.json">app/google-services.json</a>' file with your own project file taken from Firebase project you created.
+2. A postman request collection has been included in '<a href="https://github.com/DinukaNavaratna/PatientTracking/blob/main/app/src/test/postman/">app/src/test/postman/</a>' for testing the FCM push notifications. Replace the existing 'Device_Token' & 'Firebase_Auth_Key' in Postman collection variabled with your own details/credentials.
 3. You can copy the FCM Token of the device by hitting the back button from the 'Home' page of the application. Firebase Auth Key can be taken from the firebase project you created.
